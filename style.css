@@ -1,0 +1,138 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+    color: #333;
+    scroll-behavior: smooth;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  header {
+    background: linear-gradient(90deg, #FF9A9E, #FAD0C4);
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  header .logo {
+    width: 40px;
+    margin-right: 10px;
+  }
+  
+  .input-section {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  #todo-input {
+    flex-grow: 1;
+    padding: 0.5rem 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  #add-btn {
+    background: #FF9A9E;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  #add-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  #add-btn img {
+    width: 24px;
+  }
+  
+  #todo-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    transition: background 0.3s ease;
+  }
+  
+  .todo-item:hover {
+    background: #FEEBF7;
+  }
+  
+  .square {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .square.filled {
+    background-color: #85E085;
+    border-color: #6BC76B;
+  }
+  
+  .todo-text {
+    flex-grow: 1;
+    margin: 0 1rem;
+    position: relative;
+    font-size: 1rem;
+    overflow: hidden;
+  }
+  
+  .todo-text::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background-color: #FF7272;
+    bottom: 50%;
+    left: 0;
+    transform: translateY(50%);
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .todo-text.completed::after {
+    width: 100%;
+  }
+  
+  button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button img {
+    width: 20px;
+  }
+  
